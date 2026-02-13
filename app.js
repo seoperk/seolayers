@@ -56,7 +56,9 @@
       const fd = new FormData(form);
       const name = (fd.get("name") || "").toString().trim();
       const site = (fd.get("site") || "").toString().trim();
-      const message = (fd.get("message") || "").toString().trim();
+const email = (fd.get("email") || "").toString().trim();
+const message = (fd.get("message") || "").toString().trim();
+
 
       const subject = encodeURIComponent("Free SEO Audit Request — SEO Layers");
       const body = encodeURIComponent(
