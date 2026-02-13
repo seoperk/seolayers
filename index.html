@@ -1,0 +1,581 @@
+<!-- ==============================
+ SEO Layers — One Page Website
+ 3 Files: index.html, styles.css, app.js
+ Mobile Responsive • Same Layout
+
+ HOW TO USE
+ 1) Create a folder
+ 2) Put these files:
+    - index.html
+    - styles.css
+    - app.js
+ 3) Put images in same folder:
+    - usama.png
+    - seolayers_logo.jpg
+ 4) Open index.html in browser
+
+ NOTE
+ - This is pure HTML/CSS/JS (no React, no Tailwind)
+ - Smooth scroll, sticky navbar, marquee, and mailto form included
+================================== -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO Layers — SEO • Local • WordPress</title>
+    <meta
+      name="description"
+      content="SEO Layers — Local SEO, Keyword Research, WordPress, Technical SEO and ethical link growth."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Background orbs -->
+    <div class="orb orb--1" aria-hidden="true"></div>
+    <div class="orb orb--2" aria-hidden="true"></div>
+    <div class="orb orb--3" aria-hidden="true"></div>
+
+    <!-- Top strip -->
+    <div class="top-strip">
+      <div class="container top-strip__inner">
+        <div class="top-strip__left">
+          <span class="top-strip__brand">SEO Layers</span>
+          — Local SEO • Keyword Research • WordPress • Off‑Page
+        </div>
+        <div class="top-strip__right">
+          <a class="link" href="https://wa.me/923429852419" target="_blank" rel="noreferrer">
+            WhatsApp: 0342 9852419
+          </a>
+          <span class="dot">•</span>
+          <a class="link" href="mailto:usamaiskills@gmail.com">usamaiskills@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="brand" href="#home">
+          <div class="brand__logo">
+            <img src="seolayers_logo.jpg" alt="SEO Layers" />
+          </div>
+          <div>
+            <div class="brand__title">SEO Layers</div>
+            <div class="brand__tag">SEO • Local • WordPress</div>
+          </div>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#proof">Proof</a>
+          <a href="#cases">Case Studies</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a class="btn btn--primary" href="#contact">
+            Free Audit
+            <span class="btn__arrow">→</span>
+          </a>
+
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile" id="mobileMenu" hidden>
+        <div class="container mobile__inner">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#proof">Proof</a>
+          <a href="#cases">Case Studies</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section id="home" class="section hero">
+        <div class="container hero__grid">
+          <!-- Left -->
+          <div class="hero__left">
+            <div class="pills">
+              <span class="pill">🛡️ SEO Certified — iSkills Pakistan</span>
+              <span class="pill">⏱️ 2+ Years Experience</span>
+              <span class="pill">🌍 Pakistan + International</span>
+            </div>
+
+            <h1 class="h1">
+              Grow Your <span class="muted">Local Business</span> &
+              <span class="muted"> Niche Sites</span> With Proven SEO Systems
+            </h1>
+
+            <p class="lead">
+              I help businesses rank in Google Maps (Local 3‑Pack) and help niche blogs / APK sites increase organic
+              visibility through keyword research, on‑page fixes, technical improvements, and ethical off‑page growth.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#contact">
+                Get Free Audit <span class="btn__arrow">→</span>
+              </a>
+              <a class="btn btn--ghost" href="https://wa.me/923429852419" target="_blank" rel="noreferrer">
+                WhatsApp Now <span class="btn__arrow">›</span>
+              </a>
+            </div>
+
+            <div class="tools">
+              <span>Tools:</span>
+              <span class="dot">•</span>
+              <span>Google Search Console</span>
+              <span class="dot">•</span>
+              <span>GA4</span>
+              <span class="dot">•</span>
+              <span>Rank Math</span>
+              <span class="dot">•</span>
+              <span>PageSpeed Insights</span>
+            </div>
+
+            <!-- Marquee -->
+            <div class="marquee">
+              <div class="marquee__fade marquee__fade--l" aria-hidden="true"></div>
+              <div class="marquee__fade marquee__fade--r" aria-hidden="true"></div>
+
+              <div class="marquee__track" id="marqueeTrack">
+                <!-- JS will clone this row for seamless loop -->
+                <div class="marquee__row">
+                  <span class="chip">Keyword Research</span>
+                  <span class="chip">Niche Research</span>
+                  <span class="chip">Keyword Grouping</span>
+                  <span class="chip">Topical Map</span>
+                  <span class="chip">On‑Page SEO</span>
+                  <span class="chip">Technical SEO</span>
+                  <span class="chip">Local SEO</span>
+                  <span class="chip">Google Business Profile</span>
+                  <span class="chip">GSC + GA4 Setup</span>
+                  <span class="chip">Internal Linking</span>
+                  <span class="chip">Content Briefs</span>
+                  <span class="chip">Schema Markup</span>
+                  <span class="chip">Core Web Vitals</span>
+                  <span class="chip">Indexing Fixes</span>
+                  <span class="chip">Backlink Strategy</span>
+                  <span class="chip">Competitor Analysis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="hero__right">
+            <div class="card">
+              <div class="card__top">
+                <div>
+                  <div class="card__title">Free Audit Deliverables</div>
+                  <div class="card__desc">Clear issues + quick wins + priority roadmap.</div>
+                </div>
+                <div class="icon">🛠️</div>
+              </div>
+
+              <div class="list">
+                <div class="li">✓ Indexing & crawl check</div>
+                <div class="li">✓ Keyword gaps + intent</div>
+                <div class="li">✓ On‑page improvements</div>
+                <div class="li">✓ Speed & Core Web Vitals</div>
+                <div class="li">✓ Local SEO / GBP checklist</div>
+              </div>
+            </div>
+
+            <div class="grid2">
+              <div class="card card--mini">
+                <div class="stat__value">Map Pack Focus</div>
+                <div class="stat__label">Local Visibility</div>
+                <div class="stat__icon">📍</div>
+              </div>
+              <div class="card card--mini">
+                <div class="stat__value">Clean + Ethical</div>
+                <div class="stat__label">SEO Execution</div>
+                <div class="stat__icon">🛡️</div>
+              </div>
+            </div>
+
+            <div class="grid2">
+              <div class="card card--mini">
+                <div class="stat__value">Low‑Comp Wins</div>
+                <div class="stat__label">Keyword Strategy</div>
+                <div class="stat__icon">🔎</div>
+              </div>
+              <div class="card card--mini">
+                <div class="stat__value">Speed First</div>
+                <div class="stat__label">Performance</div>
+                <div class="stat__icon">⚡</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <div class="container">
+          <div class="head">
+            <div class="kicker">Services</div>
+            <h2 class="h2">Everything You Need to Rank, Convert, and Grow</h2>
+            <p class="sub">I focus on the SEO work that actually moves rankings and leads — not random tasks.</p>
+          </div>
+
+          <div class="grid2">
+            <div class="card">
+              <div class="service__top">
+                <div class="icon">🔎</div>
+                <div>
+                  <div class="card__title">Keyword Research</div>
+                  <div class="card__desc">Find low‑competition keywords, map search intent, and build a clean content roadmap for growth.</div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="li">✓ Competitor keyword gap</div>
+                <div class="li">✓ Clusters + topical map</div>
+                <div class="li">✓ Priority list for fast wins</div>
+                <div class="li">✓ Keyword intent mapping</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="service__top">
+                <div class="icon">📍</div>
+                <div>
+                  <div class="card__title">Local SEO + Google Business Profile</div>
+                  <div class="card__desc">Get higher visibility in Google Maps and attract calls, directions, and real local customers.</div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="li">✓ GBP setup + optimization</div>
+                <div class="li">✓ Local keyword targeting</div>
+                <div class="li">✓ Services + categories</div>
+                <div class="li">✓ Review strategy guidance</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="service__top">
+                <div class="icon">🛠️</div>
+                <div>
+                  <div class="card__title">WordPress Development</div>
+                  <div class="card__desc">SEO‑ready WordPress websites with fast load speed, clean structure, and conversion-focused layout.</div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="li">✓ Fast + lightweight setup</div>
+                <div class="li">✓ Mobile-first structure</div>
+                <div class="li">✓ Rank Math configuration</div>
+                <div class="li">✓ Security + backup basics</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="service__top">
+                <div class="icon">📈</div>
+                <div>
+                  <div class="card__title">Off‑Page SEO (Link Growth)</div>
+                  <div class="card__desc">Ethical link strategies for authority and trust — especially for competitive niches.</div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="li">✓ Backlink strategy</div>
+                <div class="li">✓ Niche relevance focus</div>
+                <div class="li">✓ Risk-free approach</div>
+                <div class="li">✓ Anchor text planning</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card cta">
+            <div>
+              <div class="card__title">Need Technical SEO too?</div>
+              <div class="card__desc">Indexing issues, speed, schema, redirects, crawl budget — included in the audit.</div>
+            </div>
+            <a class="btn btn--primary" href="#contact">Request Audit <span class="btn__arrow">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROOF -->
+      <section id="proof" class="section">
+        <div class="container">
+          <div class="head">
+            <div class="kicker">Proof</div>
+            <h2 class="h2">Data‑Driven SEO (Not Guesswork)</h2>
+            <p class="sub">I use Google Search Console, GA4, and performance tools to track improvements and prioritize the right work.</p>
+          </div>
+
+          <div class="grid3">
+            <div class="card card--mini">
+              <div class="stat__value">Clear Roadmap</div>
+              <div class="stat__label">SEO Audit</div>
+              <div class="stat__icon">🛠️</div>
+            </div>
+            <div class="card card--mini">
+              <div class="stat__value">Maps + Calls</div>
+              <div class="stat__label">Local SEO</div>
+              <div class="stat__icon">📍</div>
+            </div>
+            <div class="card card--mini">
+              <div class="stat__value">Core Web Vitals</div>
+              <div class="stat__label">Speed</div>
+              <div class="stat__icon">⚡</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="proof__top">
+              <div>
+                <div class="card__title">Add your screenshots here</div>
+                <div class="card__desc">Replace these placeholders with your GSC graphs and PageSpeed results.</div>
+              </div>
+              <div class="pills">
+                <span class="pill">GSC Performance</span>
+                <span class="pill">PageSpeed Insights</span>
+                <span class="pill">Local 3‑Pack</span>
+              </div>
+            </div>
+
+            <div class="grid3 proof__shots">
+              <div class="shot">GSC Screenshot</div>
+              <div class="shot">Speed Screenshot</div>
+              <div class="shot">GBP Insights</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASES -->
+      <section id="cases" class="section">
+        <div class="container">
+          <div class="head">
+            <div class="kicker">Case Studies</div>
+            <h2 class="h2">A Few Examples of Work I Do</h2>
+            <p class="sub">Below are sample case studies. You can replace them with your real projects.</p>
+          </div>
+
+          <div class="grid2">
+            <div class="card">
+              <div class="case__top">
+                <div>
+                  <div class="case__niche">Local Business</div>
+                  <div class="case__title">Google Maps Visibility Improvement</div>
+                </div>
+                <div class="icon">✨</div>
+              </div>
+
+              <div class="case__block">
+                <div class="case__label">Problem</div>
+                <div class="case__text">The business was not ranking in the local 3‑pack and had low calls from Google.</div>
+              </div>
+
+              <div class="case__block">
+                <div class="case__label">What I did</div>
+                <div class="case__text">Optimized GBP categories, services, on‑page local keywords, and fixed NAP consistency.</div>
+              </div>
+
+              <div class="case__block">
+                <div class="case__label">Result</div>
+                <div class="case__text case__text--strong">Improved visibility and started receiving more calls and direction requests.</div>
+              </div>
+
+              <a class="case__link" href="#contact">Request similar work <span>›</span></a>
+            </div>
+
+            <div class="card">
+              <div class="case__top">
+                <div>
+                  <div class="case__niche">Niche Blog / APK Site</div>
+                  <div class="case__title">Organic Visibility Growth</div>
+                </div>
+                <div class="icon">✨</div>
+              </div>
+
+              <div class="case__block">
+                <div class="case__label">Problem</div>
+                <div class="case__text">Pages were indexed but not ranking. The site had low topical authority.</div>
+              </div>
+
+              <div class="case__block">
+                <div class="case__label">What I did</div>
+                <div class="case__text">Built keyword clusters, improved internal linking, fixed titles/H1s, and optimized speed.</div>
+              </div>
+
+              <div class="case__block">
+                <div class="case__label">Result</div>
+                <div class="case__text case__text--strong">More impressions, higher average position, and steady traffic growth.</div>
+              </div>
+
+              <a class="case__link" href="#contact">Request similar work <span>›</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container about__grid">
+          <div class="about__left">
+            <div class="kicker">About</div>
+            <h2 class="h2">I’m Usama — Founder of SEO Layers</h2>
+            <div class="about__role">SEO Specialist • Local SEO • WordPress • Off‑Page</div>
+
+            <p class="sub">
+              I’m an SEO specialist with <strong>2+ years</strong> of hands‑on experience. I’m SEO certified from
+              <strong> iSkills Pakistan</strong>, and I focus on SEO that drives real outcomes: visibility, calls, and organic traffic.
+            </p>
+
+            <p class="sub">
+              I work with local businesses and niche websites (including blogs and APK sites). My approach is simple:
+              research first, fix the foundation, then scale growth.
+            </p>
+
+            <div class="pills">
+              <span class="pill">🔎 Research‑Driven</span>
+              <span class="pill">⚡ Speed‑Focused</span>
+              <span class="pill">🛡️ Ethical SEO</span>
+            </div>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="https://wa.me/923429852419" target="_blank" rel="noreferrer">
+                WhatsApp <span class="btn__arrow">→</span>
+              </a>
+              <a class="btn btn--ghost" href="#contact">
+                Free Audit <span class="btn__arrow">›</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="about__right">
+            <div class="about__img">
+              <div class="about__overlay" aria-hidden="true"></div>
+              <img src="usama.png" alt="Usama — SEO Layers" loading="lazy" />
+              <div class="about__badge">
+                <span>✨</span>
+                <div>SEO Layers — Systems that Rank</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container contact__grid">
+          <div>
+            <div class="kicker">Contact</div>
+            <h2 class="h2">Get a Free Audit of Your Website</h2>
+            <p class="sub">
+              Send your website URL and I’ll share a clear action plan. You’ll know exactly what’s holding your site
+              back — and what to fix first.
+            </p>
+
+            <div class="contact__cards">
+              <div class="card">
+                <div class="card__desc">WhatsApp</div>
+                <a class="contact__big" href="https://wa.me/923429852419" target="_blank" rel="noreferrer">
+                  0342 9852419 <span>→</span>
+                </a>
+              </div>
+              <div class="card">
+                <div class="card__desc">Email</div>
+                <a class="contact__big" href="mailto:usamaiskills@gmail.com">usamaiskills@gmail.com <span>→</span></a>
+              </div>
+            </div>
+
+            <div class="tiny">Response time: usually within 24 hours.</div>
+          </div>
+
+          <div>
+            <div class="card">
+              <div class="card__title">Quick Audit Request</div>
+              <div class="card__desc">This form opens your email with the details.</div>
+
+              <form class="form" id="auditForm">
+                <label>
+                  <span>Your Name</span>
+                  <input type="text" name="name" placeholder="Your name" />
+                </label>
+
+                <label>
+                  <span>Website URL</span>
+                  <input type="url" name="site" placeholder="https://yourwebsite.com" />
+                </label>
+
+                <label>
+                  <span>Message</span>
+                  <textarea name="message" rows="5" placeholder="Tell me what you want to improve (rankings, maps, traffic, speed...)"></textarea>
+                </label>
+
+                <div class="form__actions">
+                  <button class="btn btn--primary" type="submit">
+                    Send Email <span class="btn__arrow">→</span>
+                  </button>
+                  <a class="btn btn--ghost" href="https://wa.me/923429852419" target="_blank" rel="noreferrer">
+                    Send on WhatsApp <span class="btn__arrow">›</span>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="footer__title">SEO Layers</div>
+          <div class="footer__desc">SEO systems for local businesses, niche blogs, and APK sites.</div>
+        </div>
+
+        <div>
+          <div class="footer__head">Quick Links</div>
+          <div class="footer__links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#proof">Proof</a>
+            <a href="#cases">Case Studies</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__head">Contact</div>
+          <div class="footer__links">
+            <a href="https://wa.me/923429852419" target="_blank" rel="noreferrer">WhatsApp: 0342 9852419</a>
+            <a href="mailto:usamaiskills@gmail.com">Email: usamaiskills@gmail.com</a>
+            <div class="tiny" id="year"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <a class="float" href="#contact">Free Audit</a>
+
+    <script src="app.js"></script>
+  </body>
+</html>
