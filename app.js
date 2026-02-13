@@ -62,7 +62,8 @@ const message = (fd.get("message") || "").toString().trim();
 
       const subject = encodeURIComponent("Free SEO Audit Request — SEO Layers");
       const body = encodeURIComponent(
-        `Name: ${name}\nWebsite: ${site}\n\nMessage:\n${message}\n\nPreferred Contact: WhatsApp (${PHONE})\n\nWhatsApp: ${WA_LINK}`
+        `Name: ${name}\nEmail: ${email}\nWebsite: ${site}\n\nMessage:\n${message}\n\nPreferred Contact: WhatsApp (${PHONE})\n\nWhatsApp: ${WA_LINK}`
+
       );
 
       window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
