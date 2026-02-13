@@ -386,6 +386,7 @@ a {
   line-height: 1.5;
 }
 
+
 .icon {
   width: 44px;
   height: 44px;
@@ -409,6 +410,39 @@ a {
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
 }
+/* Fix stat card layout (Proof + Hero mini stats) */
+.stat {
+  display: grid;
+  gap: 6px;
+  padding-right: 54px; /* icon ke liye space */
+  min-height: 92px;
+}
+
+.stat__value {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.stat__label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 2px;
+}
+
+.stat__icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
 
 /* Layout grids */
 .hero {
