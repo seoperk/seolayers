@@ -639,15 +639,29 @@ a {
 }
 
 .shot {
-  height: 160px;
+  height: auto;
+  min-height: 260px;
+  padding: 12px;
+  overflow: hidden;
   border-radius: var(--radius-xl);
   border: 1px solid var(--stroke);
   background: rgba(255, 255, 255, 0.04);
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
 }
+
+.shot img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  display: block;
+  border-radius: 18px;
+}
+
 
 @media (max-width: 900px) {
   .proof__top {
