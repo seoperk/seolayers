@@ -928,6 +928,19 @@ textarea:focus {
   }
 }
 
+.footer__link{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.footer__icon{
+  width:22px;
+  text-align:center;
+  opacity:0.9;
+}
+
+
 /* Floating CTA */
 .float {
   position: fixed;
