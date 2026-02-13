@@ -386,6 +386,19 @@ a {
   line-height: 1.5;
 }
 
+/* Fix Free Audit Deliverables top row layout */
+.card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card__top .icon {
+  flex: 0 0 auto;
+}
+
+
 
 .icon {
   width: 44px;
