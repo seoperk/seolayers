@@ -48,25 +48,35 @@
   }
 
   // Contact form => mailto
-  const form = document.getElementById("auditForm");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+ const form = document.getElementById("auditForm");
 
-      const fd = new FormData(form);
-      const name = (fd.get("name") || "").toString().trim();
-      const site = (fd.get("site") || "").toString().trim();
-const email = (fd.get("email") || "").toString().trim();
-const message = (fd.get("message") || "").toString().trim();
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) btn.disabled = true;
 
-      const subject = encodeURIComponent("Free SEO Audit Request — SEO Layers");
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nWebsite: ${site}\n\nMessage:\n${message}\n\nPreferred Contact: WhatsApp (${PHONE})\n\nWhatsApp: ${WA_LINK}`
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
 
-      );
+      if (res.ok) {
+        alert("✅ Message sent successfully! I’ll reply within 24 hours.");
+        form.reset();
+      } else {
+        alert("❌ Something went wrong. Please try again or WhatsApp me.");
+      }
+    } catch (err) {
+      alert("❌ Network error. Please try again or WhatsApp me.");
+    }
 
-      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-    });
+    if (btn) btn.disabled = false;
+  });
+}
+
   }
 })();
