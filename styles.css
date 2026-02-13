@@ -1,21 +1,12 @@
-/* ==============================
- SEO Layers — styles.css
- Pure CSS (no Tailwind)
- Mobile responsive
-================================== */
-
 :root {
   --bg: #070a12;
   --card: rgba(255, 255, 255, 0.05);
-  --card2: rgba(255, 255, 255, 0.07);
   --stroke: rgba(255, 255, 255, 0.1);
   --stroke2: rgba(255, 255, 255, 0.15);
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.7);
-  --muted2: rgba(255, 255, 255, 0.55);
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
   --radius-xl: 28px;
-  --radius-lg: 22px;
   --radius-md: 16px;
 }
 
@@ -46,18 +37,8 @@ a {
 }
 
 .container {
-  width: min(1100px, calc(100% - 32px));
+  width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
-}
-
-.section {
-  padding: 72px 0;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 56px 0;
-  }
 }
 
 /* Background orbs */
@@ -128,6 +109,7 @@ a {
   color: var(--muted);
   flex-wrap: wrap;
   justify-content: flex-end;
+  white-space: nowrap;
 }
 
 .link:hover {
@@ -142,6 +124,9 @@ a {
   .top-strip__inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .top-strip__right {
+    white-space: normal;
   }
 }
 
@@ -261,6 +246,17 @@ a {
   }
   .hamburger {
     display: inline-block;
+  }
+}
+
+/* Sections */
+.section {
+  padding: 72px 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 56px 0;
   }
 }
 
@@ -424,7 +420,7 @@ a {
 .hero__grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 44px;
+  gap: 34px;
   align-items: start;
 }
 
@@ -515,7 +511,6 @@ a {
   white-space: nowrap;
   padding: 12px 0;
   gap: 18px;
-  will-change: transform;
 }
 
 .marquee__row {
@@ -560,13 +555,6 @@ a {
 .head {
   max-width: 760px;
   margin-bottom: 28px;
-}
-
-/* Service card */
-.service__top {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
 }
 
 /* CTA card */
@@ -686,10 +674,6 @@ a {
 .about__role {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
-}
-
-.about__right {
-  position: relative;
 }
 
 .about__img {
@@ -896,4 +880,11 @@ textarea:focus {
 
 .float:hover {
   transform: translateY(-2px);
+}
+
+/* Hide floating CTA on desktop */
+@media (min-width: 900px) {
+  .float {
+    display: none;
+  }
 }
