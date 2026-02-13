@@ -1,26 +1,13 @@
-// ==============================
-// SEO Layers — app.js
-// Pure JavaScript
-// - Mobile menu
-// - Marquee seamless loop
-// - Contact form => mailto
-// - Year in footer
-// ==============================
-
 (function () {
   const WA_LINK = "https://wa.me/923429852419";
   const EMAIL = "usamaiskills@gmail.com";
   const PHONE = "0342 9852419";
 
-  // ------------------------------
   // Footer year
-  // ------------------------------
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = `© ${new Date().getFullYear()} SEO Layers`;
 
-  // ------------------------------
   // Mobile menu
-  // ------------------------------
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
 
@@ -40,20 +27,16 @@
   if (hamburger && mobileMenu) {
     hamburger.addEventListener("click", toggleMenu);
 
-    // close on link click
     mobileMenu.querySelectorAll("a").forEach((a) => {
       a.addEventListener("click", closeMenu);
     });
 
-    // close on ESC
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeMenu();
     });
   }
 
-  // ------------------------------
-  // Marquee: clone row for seamless
-  // ------------------------------
+  // Marquee clone for seamless
   const marqueeTrack = document.getElementById("marqueeTrack");
   if (marqueeTrack) {
     const row = marqueeTrack.querySelector(".marquee__row");
@@ -64,11 +47,8 @@
     }
   }
 
-  // ------------------------------
   // Contact form => mailto
-  // ------------------------------
   const form = document.getElementById("auditForm");
-
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -83,8 +63,7 @@
         `Name: ${name}\nWebsite: ${site}\n\nMessage:\n${message}\n\nPreferred Contact: WhatsApp (${PHONE})\n\nWhatsApp: ${WA_LINK}`
       );
 
-      const mailto = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-      window.location.href = mailto;
+      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
     });
   }
 })();
